@@ -19,10 +19,10 @@ public class HospitalAppointmentApplication {
 
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-				.allowedOrigins("https://43.205.255.47:80")
-				.allowedMethods("GET", "POST", "PUT", "DELETE")
-				.allowedHeaders("*");
-
+				.allowedOrigins("http://bucks32024.s3-website.ap-south-1.amazonaws.com") // Frontend URL
+				.allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS") // Ensure OPTIONS ia included for preflight request
+				.allowedHeaders("*") // Allows all headers
+.allowCredentials(true); //Allows credentials if needed
 				
 			}
 
